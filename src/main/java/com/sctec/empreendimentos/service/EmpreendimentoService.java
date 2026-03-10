@@ -1,6 +1,5 @@
 package com.sctec.empreendimentos.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -13,10 +12,13 @@ import com.sctec.empreendimentos.dto.EmpreendimentoResponseDTO;
 import com.sctec.empreendimentos.repository.EmpreendimentoRepository;
 
 @Service
-@RequiredArgsConstructor
 public class EmpreendimentoService {
 
     private final EmpreendimentoRepository repository;
+
+    public EmpreendimentoService(EmpreendimentoRepository repository) {
+        this.repository = repository;
+    }
 
     public EmpreendimentoResponseDTO criar(EmpreendimentoCreateDTO dto) {
         var empreendimento = Empreendimento.builder().nome(dto.nome()).nomeEmpreendedor(dto.nomeEmpreendedor()).municipio(dto.municipio())

@@ -1,7 +1,6 @@
 package com.sctec.empreendimentos.controller;
 
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -14,10 +13,13 @@ import com.sctec.empreendimentos.service.EmpreendimentoService;
 
 @RestController
 @RequestMapping("/api/empreendimentos")
-@RequiredArgsConstructor
 public class EmpreendimentoController {
 
     private final EmpreendimentoService service;
+
+    public EmpreendimentoController(EmpreendimentoService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public ResponseEntity<EmpreendimentoResponseDTO> criar(@RequestBody @Valid EmpreendimentoCreateDTO dto) {
