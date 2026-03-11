@@ -27,10 +27,12 @@ API REST desenvolvida com Spring Boot para cadastro e gerenciamento de empreendi
 ```bash
 git clone https://github.com/filiperesende/sctec.git
 cd sctec
+```
 
 ### 2. Executar no ambiente local
+```bash
 mvn clean spring-boot:run
+```
 
 ### 3. Acessar a aplicação
  - Swagger UI (testar endpoints) -> http://localhost:8080/swagger-ui.html
- 
