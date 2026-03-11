@@ -24,13 +24,13 @@ API REST desenvolvida com Spring Boot para cadastro e gerenciamento de empreendi
 ## Como Executar via Linha de Comando
 
 ### 1. Clonar o repositório
-```bash
+```sh
 git clone https://github.com/filiperesende/sctec.git
 cd sctec
 ```
 
 ### 2. Executar no ambiente local
-```bash
+```sh
 mvn clean spring-boot:run
 ```
 
